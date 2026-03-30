@@ -1681,6 +1681,13 @@
       }
     });
 
+    // Click on backdrop (outside nav links) closes menu
+    mobileMenu.addEventListener("click", (event) => {
+      if (event.target === mobileMenu) {
+        setMenuState(false);
+      }
+    });
+
     toggleHeaderState();
     window.addEventListener("scroll", toggleHeaderState, { passive: true });
 
